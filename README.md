@@ -1,2 +1,2 @@
-# EstudosPostgress
-Estudos de Postgress incluindo a Boson treinamentos
+# EstudosPostgreSQL
+Estudos de PostgreSQL incluindo a Boson treinamentos
