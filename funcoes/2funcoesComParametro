@@ -1,0 +1,19 @@
+create or replace table professor(
+    id int primary key,
+    nome varchar(30),
+    dt_nasc date,
+    salario numeric
+);
+
+-- nomes podem ser qql um, mas tipos tem q ser igual a tabela
+-- (in/out/inout var tipo) -> se nao especificado, o padrão é in
+create or replace function adicionaProfessor(id int, nome varchar, dt_nasc date, salario numeric)
+returns void as $$
+begin
+    insert into professor values (id,nome,dt_nasc,salario);
+end;
+$$ language plpgsql;
+
+select adicionaProfessor(1,'João','10/09/1990',3000);
+
+select * from professor;
